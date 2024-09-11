@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOWCYII STORE</title>
+    <style>
+        /* Background */
+        body {
+            background-image: url('https://i.postimg.cc/tCp3h5gj/thumb.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Logo */
+        .logo-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .logo-container img {
+            width: 150px;
+            height: auto;
+        }
+
+        /* Banner */
+        .banner-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .banner-container img {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Search Box */
+        .search-container {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            width: 250px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .search-container input[type="button"] {
+            padding: 10px 15px;
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .search-container input[type="button"]:hover {
+            background-color: #ff5500;
+        }
+
+        /* Product Container */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Product Card */
+        .product {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+
+        .product p {
+            font-size: 14px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 16px;
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        /* Checkout Button */
+        .checkout-button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .checkout-button:hover {
+            background-color: #218838;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .product {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="https://i.postimg.cc/Z5x7nmKX/20240910-210435.png" alt="FLOWCYII STORE Logo">
+    </div>
+
+    <!-- Banner -->
+    <div class="banner-container">
+        <img src="https://i.postimg.cc/7hgNqtYB/20240910-192627.jpg" alt="FLOWCYII STORE Banner">
+    </div>
+
+    <!-- Search Box -->
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search for products...">
+        <input type="button" value="Search" onclick="searchProducts()">
+    </div>
+
+    <!-- Products Section -->
+    <div class="product-container" id="product-container">
+        <!-- Product 1 -->
+        <div class="product" data-name="Panel Pterodactyl 1GB">
+            <img src="https://i.postimg.cc/3w5JvLKj/20240910-080342.jpg" alt="Panel Pterodactyl 1GB">
+            <h3>Panel Pterodactyl 1GB</h3>
+            <p>FLOWCYII STORE MEMBERIKAN GARANSI 10 HARI. JANGAN RAGU UNTUK MEMBELI.</p>
+            <p class="price">Rp. 1000</p>
+            <button class="checkout-button" onclick="location.href='https://wa.me/6288211386009?text=Assalamualaikum%20bang%20beli%20Panel%20Pterodactyl%201GB'">Beli Sekarang</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product" data-name="Panel Pterodactyl 2GB">
+            <img src="https://i.postimg.cc/3w5JvLKj/20240910-080342.jpg" alt="Panel Pterodactyl 2GB">
+            <h3>Panel Pterodactyl 2GB</h3>
+            <p>FLOWCYII STORE MEMBERIKAN GARANSI 10 HARI. JANGAN RAGU UNTUK MEMBELI.</p>
+            <p class="price">Rp. 2000</p>
+            <button class="checkout-button" onclick="location.href='https://wa.me/6288211386009?text=Assalamualaikum%20bang%20beli%20Panel%20Pterodactyl%202GB'">Beli Sekarang</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product" data-name="Panel Pterodactyl 3GB">
+            <img src="https://i.postimg.cc/3w5JvLKj/20240910-080342.jpg" alt="Panel Pterodactyl 3GB">
+            <h3>Panel Pterodactyl 3GB</h3>
+            <p>FLOWCYII STORE MEMBERIKAN GARANSI 10 HARI. JANGAN RAGU UNTUK MEMBELI.</p>
+            <p class="price">Rp. 3000</p>
+            <button class="checkout-button" onclick="location.href='https://wa.me/6288211386009?text=Assalamualaikum%20bang%20beli%20Panel%20Pterodactyl%203GB'">Beli Sekarang</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product" data-name="Panel Pterodactyl 4GB">
+            <img src="https://i.postimg.cc/3w5JvLKj/20240910-080342.jpg" alt="Panel Pterodactyl 4GB">
+            <h3>Panel Pterodactyl 4GB</h3>
+            <p>FLOWCYII STORE MEMBERIKAN GARANSI 10 HARI. JANGAN RAGU UNTUK MEMBELI.</p>
+            <p class="price">Rp. 4000</p>
+            <button class="checkout-button" onclick="location.href='https://wa.me/6288211386009?text=Assalamualaikum%20bang%20beli%20Panel%20Pterodactyl%204GB'">Beli Sekarang</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product" data-name="Panel Pterodactyl 5GB">
+            <img src="https://i.postimg.cc/3w5JvLKj/20240910-080342.jpg" alt="Panel Pterodactyl 5GB">
+            <h3>Panel Pterodactyl 5GB</h3>
+            <p>FLOWCYII STORE MEMBERIKAN GARANSI 10 HARI. JANGAN RAGU UNTUK MEMBELI.</p>
+            <p class="price">Rp. 5000</p>
+            <button class="checkout-button" onclick="location.href='https://wa.me/6288211386009?text=Assalamualaikum%20bang%20beli%20Panel%20Pterodactyl%205GB'">Beli Sekarang</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product" data-name="Panel Pterodactyl 6GB">
+            <img src="https://i.postimg.cc/3w5JvLKj/20240910-080342.jpg" alt="Panel Pterodactyl 6GB">
+            <h3>Panel Pterodactyl 6GB</h3>
+            <p>FLOWCYII STORE MEMBERIKAN GARANSI 10 HARI. JANGAN RAGU UNTUK MEMBELI.</p>
+            <p class="price">Rp. 6000</p>
+            <button class="checkout-button" onclick="location.href='https://wa.me/6288211386009?text=Assalamualaikum%20bang%20beli%20Panel%20Pterodactyl%206GB'">Beli Sekarang</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product" data-name="Panel Pterodactyl 7GB">
+            <img src="https://i.postimg.cc/3w5JvLKj/20240910-080342.jpg" alt="Panel Pterodactyl 7GB">
+            <h3>Panel Pterodactyl 7GB</h3>
+            <p>FLOWCYII STORE MEMBERIKAN GARANSI 10 HARI. JANGAN RAGU UNTUK MEMBELI.</p>
+            <p class="price">Rp. 7000</p>
+            <button class="checkout-button" onclick="location.href='https://wa.me/6288211386009?text=Assalamualaikum%20bang%20beli%20Panel%20Pterodactyl%207GB'">Beli Sekarang</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product" data-name="Panel Pterodactyl 8GB">
+            <img src="https://i.postimg.cc/3w5JvLKj/20240910-080342.jpg" alt="Panel Pterodactyl 8GB">
+            <h3>Panel Pterodactyl 8GB</h3>
+            <p>FLOWCYII STORE MEMBERIKAN GARANSI 10 HARI. JANGAN RAGU UNTUK MEMBELI.</p>
+            <p class="price">Rp. 8000</p>
+            <button class="checkout-button" onclick="location.href='https://wa.me/6288211386009?text=Assalamualaikum%20bang%20beli%20Panel%20Pterodactyl%208GB'">Beli Sekarang</button>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product" data-name="Panel Pterodactyl 9GB">
+            <img src="https://i.postimg.cc/3w5JvLKj/20240910-080342.jpg" alt="Panel Pterodactyl 9GB">
+            <h3>Panel Pterodactyl 9GB</h3>
+            <p>FLOWCYII STORE MEMBERIKAN GARANSI 10 HARI. JANGAN RAGU UNTUK MEMBELI.</p>
+            <p class="price">Rp. 9000</p>
+            <button class="checkout-button" onclick="location.href='https://wa.me/6288211386009?text=Assalamualaikum%20bang%20beli%20Panel%20Pterodactyl%209GB'">Beli Sekarang</button>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="product" data-name="Panel Pterodactyl 10GB">
+            <img src="https://i.postimg.cc/3w5JvLKj/20240910-080342.jpg" alt="Panel Pterodactyl 10GB">
+            <h3>Panel Pterodactyl 10GB</h3>
+            <p>FLOWCYII STORE MEMBERIKAN GARANSI 10 HARI. JANGAN RAGU UNTUK MEMBELI.</p>
+            <p class="price">Rp. 10000</p>
+            <button class="checkout-button" onclick="location.href='https://wa.me/6288211386009?text=Assalamualaikum%20bang%20beli%20Panel%20Pterodactyl%2010GB'">Beli Sekarang</button>
+        </div>
+    </div>
+
+    <script>
+        function searchProducts() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+
+            products.forEach(product => {
+                const productName = product.getAttribute('data-name').toLowerCase();
+                if (productName.includes(searchInput)) {
+                    product.style.display = 'inline-block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        document.getElementById('search').addEventListener('input', searchProducts);
+    </script>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2024 Flowcyii Store. All Rights Reserved</p>
+    </div>
+
+</body>
+  </html>
+  
